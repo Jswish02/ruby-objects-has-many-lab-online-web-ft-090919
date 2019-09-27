@@ -11,12 +11,12 @@ end
 def add_song(song)
   song.artist= self
 end
-def add_song_name(name)
+def add_song_by_name(name)
   song = song.new(name)
   song.artist = self
 end
 def songs 
-  song.all.all {|song| song.artist == self}
+  song.all.select {|song| song.artist == self}
 end
 def self.song_count
   song.all.count
