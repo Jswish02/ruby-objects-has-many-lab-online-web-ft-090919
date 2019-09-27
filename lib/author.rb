@@ -14,7 +14,7 @@ def add_post(post)
 end
 def add_post_by_title(title)
   post = post.new(title)
-  Post.author = self
+  post.author = self
 end 
 def post 
   Post.all.select { |post| post.author == self}
