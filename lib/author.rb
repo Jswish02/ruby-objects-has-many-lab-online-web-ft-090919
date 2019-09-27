@@ -20,6 +20,6 @@ def post
   Post.all.select { |post| post.author == self}
 end 
 def self.post_count
-  post.all.count 
+  Post.all.count 
 end
 end
